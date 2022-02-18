@@ -9,7 +9,7 @@ body {
 
 .menu {
     width: 100%;
-    background-color: #6559c4;
+    background-color: #6659c4;
     text-align: center;
     display: flex;
     justify-content: right;
@@ -20,20 +20,26 @@ body {
 
 .subItemMenu {
     float: left;
-    width: 3rem;
+    width: 5rem;
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     
     position:relative;
-    /* background-color: green; */
-    padding-left: 10px;
     color: white;
     margin: 10px;
+    padding-left: 10px;
+    word-wrap: break-word;
+    padding-left: 20px;
+    /* padding: auto; */
     border: 0px;
-    border-left: 1px solid #ffffff;;
+    border-left: 1px solid #ffffff;
     border-style: solid;
+    font-family: 'Quicksand', sans-serif;
+    font-size: medium;
+    transition-duration: 0.4s;
+    
     
 }
 
@@ -46,6 +52,16 @@ body {
     border: 0px;
     border-left: 1px solid #ffffff;
     border-style: solid;
+    text-decoration: underline;
+}
+
+.subItemMenu:last-child {
+    padding-right: 10px
+}
+
+.subItemMenu:active {
+    text-decoration: underline;
+    color: #99a63b;
 }
 
 .topbar {
@@ -56,10 +72,109 @@ body {
 }
 
 .conteudo {
-    /* Center horizontally*/
     position:relative;
     margin-left: 15%;
     margin-right: 15%;
-    text-align: center
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+    margin-top: 3rem;
+}
+
+.titulo {
+    position:relative;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+
+}
+
+
+.buttonCadastro {
+    background-color: #6559c4; /* Green */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: 1px;
+    border-color: #ffffff;
+    border-style: solid;
+    margin-top: 2rem;
+  }
+
+.buttonCadastro:hover {
+    background-color: #ffffff; /* Green */
+    color: #6559c4;
+    border: 1px;
+    border-color: #6559c4;
+    border-style: solid;
+}
+
+.buttonCadastro:active{
+    background-color: #99a63b;
+    color: black;
+    border: 1px;
+    border-color: #ffffff;
+    border-style: solid;
     
+}
+
+.tabela {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse:collapse;
+
+}
+
+th, td {
+border: none;
+padding: 8px;
+text-align: left;
+
+}
+
+th {
+    background-color: #6559c4;
+    color: #ffffff;
+}
+
+tr {
+    border-radius: 1px;
+    border-style: none;
+}
+
+
+tr:hover:not(:first-child) {
+    background-color: gainsboro;
+
+}
+
+.buttonEdicao {
+    text-decoration: none;
+    color: #6559c4;
+    font-size: 20px;
+  }
+
+.buttonEdicao:hover {
+    text-decoration: underline;
+    color: #1d1a38;
+
+}
+
+.buttonRemover {
+    text-decoration: none;
+    color: rgb(255, 50, 50);
+    font-size: 20px;
+  }
+
+.buttonRemover:hover {
+    text-decoration: underline;
+    color: rgb(107, 22, 22);
+
 }

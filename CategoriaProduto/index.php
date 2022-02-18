@@ -12,20 +12,25 @@ $categorias = listEntities($conn, "CategoriaProduto");
 $conn->close();
 ?>
 
-Categoria index
-<button onclick="location.href = 'create.php'">Cadastrar nova categoria</button>
-<table>
+<session class="titulo">
+    Categoria 
+</session> </br>
+<button class="buttonCadastro" onclick="location.href = 'create.php'">Cadastrar nova categoria</button>
+<table class="tabela">
     <tr>
         <th>Nome</th>
+        <th>Editar</th>
+        <th>Remover</th>
     </tr>
+    
     <?php foreach ($categorias as $row) : ?>
         <tr>
             <td><?=$row['nome']?></td>
             <td>
-                <a class="btn btn-primary text-white" href="./edit.php?id=<?= $row['id'] ?>">Editar</a>
+                <a class="buttonEdicao" href="./edit.php?id=<?= $row['id'] ?>">Editar</a>
             </td>
             <td>
-                <a class="btn btn-danger text-white" href="./delete.php?id=<?= $row['id'] ?>">Remover</a>
+                <a class="buttonRemover" href="./delete.php?id=<?= $row['id'] ?>">Remover</a>
             </td>
         </tr>
     <?php endforeach; ?>
