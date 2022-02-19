@@ -18,7 +18,6 @@ if (isset($_POST["nome"])) {
 }
 
 $entity = findEntity($conn, "CategoriaProduto", $id);
-echo $entity["nome"]
 ?>
 
 Editar categoria

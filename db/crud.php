@@ -53,10 +53,11 @@ function updateEntity(mysqli $conn, string $nomeTabela, $id, array $variaveis, s
     return mysqli_query($conn, $sql);
 }
 
-function deleteEntity(mysqli $conn, string $nomeTabela, $id)
+function deleteEntity(mysqli $conn, string $nomeTabela, $id, string $returnLocation = './index.php')
 {
     $sql = "DELETE FROM {$nomeTabela} WHERE id={$id}";
     
+    header("Location: {$returnLocation}");
     return mysqli_query($conn, $sql);
 }
 
