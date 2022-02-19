@@ -67,20 +67,8 @@ function mountCreateSql(string $nomeTabela, array $variaveis)
     $sqlFinal = "VALUES (";
 
     foreach ($variaveis as $variavel => $valor) {
-        if (!$valor) {
-            echo "A variável {$variavel} não foi preenchida";
-            return false;
-        }
+        $sqlFinal .= "'{$valor}', ";
         $sqlInicial .= "{$variavel}, ";
-
-        switch (gettype($valor)) {
-            case 'string':
-                $sqlFinal .= "'{$valor}', ";
-                break;
-            default:
-                $sqlFinal .= "{$valor}, ";
-                break;
-        }
     }
 
     $sqlInicial = substr($sqlInicial, 0, -2);
@@ -97,21 +85,7 @@ function mountUpdateSql(string $nomeTabela, $id, array $variaveis)
     $sql = "UPDATE {$nomeTabela} SET ";
 
     foreach ($variaveis as $variavel => $valor) {
-        if (!$valor) {
-            echo "A variável {$variavel} não foi preenchida";
-            return false;
-        }
-
-        $sql .= "{$variavel} = ";
-
-        switch (gettype($valor)) {
-            case 'string':
-                $sql .= "'{$valor}', ";
-                break;
-            default:
-                $sql .= "{$valor}, ";
-                break;
-        }
+        $sql .= "{$variavel} = '{$valor}', ";
     }
 
     $sql = substr($sql, 0, -2);

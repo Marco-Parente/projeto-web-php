@@ -26,6 +26,6 @@ Criar categoria
 
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
 </form>
-<button onclick="location.href = '../categoria-produto'">Voltar</button>
+<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

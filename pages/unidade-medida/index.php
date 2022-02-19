@@ -1,5 +1,5 @@
 <?php
-$title = "Padaria - Categorias de produto";
+$title = "Padaria - Unidades de medida";
 require_once "../../components/header.php";
 require_once "../../db/crud.php";
 require_once "../../db/database.php";
@@ -7,25 +7,27 @@ require_once "../../db/database.php";
 $db = new PadariaDB();
 $conn = $db->return_connection();
 
-$entities = listEntities($conn, "CategoriaProduto");
+$entidades = listEntities($conn, "unidade");
 
 $conn->close();
 ?>
 
 <session class="titulo">
-    Categoria 
+    Unidades de medida 
 </session> </br>
-<button class="buttonCadastro" onclick="location.href = 'create.php'">Cadastrar nova categoria</button>
+<button class="buttonCadastro" onclick="location.href = 'create.php'">Cadastrar nova unidade de medida</button>
 <table class="tabela">
     <tr>
         <th>Nome</th>
+        <th>Sigla</th>
         <th>Editar</th>
         <th>Remover</th>
     </tr>
     
-    <?php foreach ($entities as $row) : ?>
+    <?php foreach ($entidades as $row) : ?>
         <tr>
             <td><?=$row['nome']?></td>
+            <td><?=$row['sigla']?></td>
             <td>
                 <a class="buttonEdicao" href="./edit.php?id=<?= $row['id'] ?>">Editar</a>
             </td>
