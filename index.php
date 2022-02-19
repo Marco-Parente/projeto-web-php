@@ -1,6 +1,6 @@
 <?php
 $title = "Padaria";
-require_once "./Components/header.php";
+require_once "./components/header.php";
 
 
 ?>
@@ -9,4 +9,4 @@ require_once "./Components/header.php";
         Bem Vindo :D
     </h1>
 
-<?php require_once "./Components/footer.php"; ?>
+<?php require_once "./components/footer.php"; ?>

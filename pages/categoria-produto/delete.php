@@ -1,9 +1,9 @@
 <?php
-$title = "Padaria - Editar Categoria de Produto";
+$title = "Padaria - Deletar Categoria de Produto";
 
-require_once "../Components/header.php";
-require_once "../db/database.php";
-require_once "../db/crud.php";
+require_once "../../components/header.php";
+require_once "../../db/database.php";
+require_once "../../db/crud.php";
 $db = new PadariaDB();
 $conn = $db->return_connection();
 
@@ -26,6 +26,6 @@ Deletar categoria
     <br>
     <input type="submit" name="deleteEntity" class="buttonCadastro" value="Deletar entidade" />
 </form>
-<button onclick="location.href = '../CategoriaProduto'">Voltar</button>
+<button onclick="location.href = '../categoria-produto'">Voltar</button>
 
-<?php require_once "../Components/footer.php" ?>
+<?php require_once "../../components/footer.php" ?>

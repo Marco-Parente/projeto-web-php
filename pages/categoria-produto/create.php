@@ -1,10 +1,10 @@
 <?php
-$title = "Padaria - Categorias de produto";
-require_once "../Components/header.php";
+$title = "Padaria - Criar Categorias de produto";
+require_once "../../components/header.php";
 
 if (isset($_POST["nome"])) {
-    include("../db/database.php");
-    include("../db/crud.php");
+    include("../../db/database.php");
+    include("../../db/crud.php");
 
     $nome = $_POST["nome"];
 
@@ -26,6 +26,6 @@ Criar categoria
 
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
 </form>
-<button onclick="location.href = '../CategoriaProduto'">Voltar</button>
+<button onclick="location.href = '../categoria-produto'">Voltar</button>
 
-<?php require_once "../Components/footer.php" ?>
+<?php require_once "../../components/footer.php" ?>

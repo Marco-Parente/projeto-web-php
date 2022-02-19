@@ -1,10 +1,8 @@
 <?php
 $title = "Padaria";
 
-
-
-require_once(realpath(dirname(__FILE__) . '/../Components/header.php'));
-require_once(realpath(dirname(__FILE__) . '/../db/database.php'));
+require_once(realpath(dirname(__FILE__) . '/../../components/header.php'));
+require_once(realpath(dirname(__FILE__) . '/../../db/database.php'));
 
 $db = new PadariaDB();
 
@@ -16,6 +14,7 @@ if (array_key_exists('createDatabase', $_POST)) {
 
 function createDatabase(PadariaDB $db)
 {
+    echo "criando db!";
     $db->create_database();
     $db->initialize_database();
     echo "Database criado!";
@@ -34,5 +33,5 @@ function resetDatabase(PadariaDB $db)
     <input type="submit" name="resetDatabase" class="buttonCadastro" value="Resetar banco (clicar criar dps)" />
 </form>
 
-<?php require_once(realpath(dirname(__FILE__) . '/../Components/footer.php')); ?>
+<?php require_once(realpath(dirname(__FILE__) . '/../../components/footer.php')); ?>
 

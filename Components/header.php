@@ -32,7 +32,7 @@
         <div class="menu">
           
           <?php 
-            require_once(realpath(dirname(__FILE__) . '/../Components/constants/itensMenu.php'));
+            require_once(realpath(dirname(__FILE__) . '/../components/constants/itens-menu.php'));
 
             foreach ($arr as $k => $a) {
               echo "<a href='/projeto-web-php/".$a."'><h1 class='subItemMenu'>".$k."</h1></a> ";
