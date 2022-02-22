@@ -1,5 +1,5 @@
 <?php
-$title = "Padaria - Editar Categoria de Produto";
+$title = "Padaria - Editar cliente";
 
 require_once "../../components/header.php";
 require_once "../../db/database.php";
@@ -24,7 +24,7 @@ Editar cliente
 <form id="cliente" name="cadastro" method="post" action="#">
     <label for="nome">Nome do cliente</label>
     <span class="">*</span>
-    <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome da unidade de medida..." value="<?= htmlspecialchars($entity['nome']) ?>" required />
+    <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do cliente..." value="<?= htmlspecialchars($entity['nome']) ?>" required />
 
 
     <label for="cpf">CPF</label>

@@ -1,0 +1,35 @@
+<?php
+$title = "Padaria - Editar funcionário";
+
+require_once "../../components/header.php";
+require_once "../../db/database.php";
+require_once "../../db/crud.php";
+$db = new PadariaDB();
+$conn = $db->return_connection();
+
+$id = $_GET["id"];
+
+if (isset($_POST["nome"], $_POST["cargo"])) {
+    $nome = $_POST["nome"];
+    $cargo = $_POST["cargo"];
+
+    echo updateEntity($conn, "funcionarios",  $id,  ["nome" => $nome, "cargo_id" => $cargo]);
+}
+
+$entity = findEntity($conn, "funcionarios", $id);
+?>
+
+Editar funcionario
+
+<form id="funcionario" name="cadastro" method="post" action="#">
+    <label for="nome">Nome do funcionário</label>
+    <span class="">*</span>
+    <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do funcionario..." value="<?= htmlspecialchars($entity['nome']) ?>" required />
+
+    <?php require_once "../../components/select-cargo.php" ?>
+
+    <input name="Cadastrar" type="submit" id="cadastrar" value="Editar" />
+</form>
+<button onclick="location.href = './'">Voltar</button>
+
+<?php require_once "../../components/footer.php" ?>

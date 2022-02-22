@@ -1,5 +1,16 @@
 <?php
 
+
+function customSelectSql(mysqli $conn, string $sql)
+{
+    $query = mysqli_query($conn, $sql);
+
+    if($query === false)
+        return false;
+
+    return $query;
+}
+
 function findEntity(mysqli $conn, string $nomeTabela, $id)
 {
     $sql = "SELECT * FROM {$nomeTabela}  WHERE id = {$id}";
