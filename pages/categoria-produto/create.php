@@ -1,5 +1,5 @@
 <?php
-$title = "Padaria - Criar Categorias de produto";
+$title = "Padaria - Adicionar Categorias de produto";
 require_once "../../components/header.php";
 
 if (isset($_POST["nome"])) {
@@ -17,7 +17,7 @@ if (isset($_POST["nome"])) {
 }
 ?>
 
-Criar categoria
+Adicionar categoria
 
 <form id="categoria" name="cadastro" method="post" action="#">
     <label for="nome">Nome da Categoria</label>

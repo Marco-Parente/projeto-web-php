@@ -1,5 +1,5 @@
 <?php
-$title = "Padaria - Criar Unidade de Medida";
+$title = "Padaria - Adicionar Unidade de Medida";
 require_once "../../components/header.php";
 
 if (isset($_POST["nome"])) {
@@ -18,7 +18,7 @@ if (isset($_POST["nome"])) {
 }
 ?>
 
-Criar unidade
+Adicionar unidade
 
 <form id="unidade" name="cadastro" method="post" action="#">
     <label for="nome">Nome da Unidade de Medida</label>
