@@ -17,7 +17,7 @@ class PadariaDB
         "CREATE TABLE `Produto` (
             `id` INT NOT NULL AUTO_INCREMENT,
             `nome` VARCHAR(255) NOT NULL,
-            `preÃ§o` FLOAT NOT NULL,
+            `preco` FLOAT NOT NULL,
             `categoria_id` INT NOT NULL,
             PRIMARY KEY (`id`)
         );",
