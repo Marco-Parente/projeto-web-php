@@ -29,7 +29,7 @@ if (isset($_POST["nome"])) {
     <br/>
     <label for="cpf">CPF</label>
     <input name="cpf" type="text" id="cpf" size="70" maxlength="11" placeholder="Digite o cpf..."/>
-    
+    <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
     <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>

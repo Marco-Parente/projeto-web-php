@@ -23,6 +23,7 @@ if (isset($_POST["nome"])) {
     <label for="nome">Nome da Categoria</label>
     <span class="labelInputRequired">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome da categoria..." required />
+    <br/>
 
     <input  class="buttonConcluirCadastro" name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
     <button class="voltar" onclick="location.href = './'">Voltar</button>

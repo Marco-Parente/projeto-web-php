@@ -203,6 +203,7 @@ tr:hover:not(:first-child) {
 input{
     height: 2rem;
     margin: 3px;
+    width: 25rem;
     color: #1d1a38;
     text-align: left;
     text-decoration: none;
@@ -231,6 +232,7 @@ input:focus{
     background-color: #6559c4; 
     color: white;
     padding: 6px 16px;
+    width: auto;
     text-align: center;
     text-decoration: none;
     display: inline-block;

@@ -28,6 +28,7 @@ Adicionar produto
     
     <label for="preco">Preço do Produto</label>
     <span class="">*</span>
+    <br/>
     <input name="preco" type="text" id="preco" size="70" maxlength="255" placeholder="Digite o preço do produto..." required />
 
     <?php require_once "../../components/select-categoria-produto.php" ?>
