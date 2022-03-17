@@ -24,8 +24,9 @@ Adicionar categoria
     <span class="">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome da categoria..." required />
 
-    <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
+    <input  class="buttonConcluirCadastro" name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
 </form>
-<button onclick="location.href = './'">Voltar</button>
+asdasdasd
+<button  onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

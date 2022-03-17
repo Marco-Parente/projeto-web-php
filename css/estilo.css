@@ -20,7 +20,7 @@ body {
 
 .subItemMenu {
     float: left;
-    width: 5rem;
+    width: 3.5rem;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@ body {
     margin: 10px;
     padding-left: 10px;
     word-wrap: break-word;
-    padding-left: 20px;
+    padding-left: 25px;
     /* padding: auto; */
     border: 0px;
     border-left: 1px solid #ffffff;
@@ -45,7 +45,7 @@ body {
 
 .subItemMenu:hover {
     float: left;
-    width: 8rem;
+    width: 6rem;
     position:relative;
     color: #ffffff80;
     margin: 10px;
@@ -93,7 +93,7 @@ body {
 
 
 .buttonCadastro {
-    background-color: #6559c4; /* Green */
+    background-color: #6559c4; 
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -117,7 +117,7 @@ body {
 }
 
 .buttonCadastro:active{
-    background-color: #99a63b;
+    background-color: #a09ace;
     color: black;
     border: 1px;
     border-color: #ffffff;
@@ -164,7 +164,12 @@ tr:hover:not(:first-child) {
 .buttonEdicao:hover {
     text-decoration: underline;
     color: #1d1a38;
+}
 
+.buttonEdicao:active {
+    text-decoration: underline;
+    color: #1d1a38;
+    color: #a09ace;
 }
 
 .buttonRemover {
@@ -177,4 +182,130 @@ tr:hover:not(:first-child) {
     text-decoration: underline;
     color: rgb(107, 22, 22);
 
+}
+
+.buttonRemover:active {
+    text-decoration: underline;
+    color: rgb(122, 77, 77);
+
+}
+
+.tituloSubPagina {
+    position:relative;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+input{
+    height: 2rem;
+    margin: 3px;
+    color: #1d1a38;
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: 1px;
+    border-color: #6559c4;
+    border-style: solid;
+    margin-top: 2rem;
+}
+
+input:focus{
+    background-color: gainsboro;
+    border: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #4a4288;
+    outline:none;
+}
+
+#cadastrar,#deletar{
+    background-color: #6559c4; 
+    color: white;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: 1px;
+    border-color: #ffffff;
+    border-style: solid;
+    margin-top: 2rem;
+}
+
+#cadastrar:hover,#deletar:hover {
+    background-color: #ffffff; /* Green */
+    color: #6559c4;
+    border: 1px;
+    border-color: #6559c4;
+    border-style: solid;
+}
+
+#cadastrar:active,#deletar:active{
+    background-color: #a09ace;
+    color: black;
+    border: 1px;
+    border-color: #ffffff;
+    border-style: solid;
+    
+}
+
+.voltar{
+    background-color: white; 
+    color: #6559c4;
+    padding: 5.5px 15px;
+    padding-bottom: 4px;
+    margin-top: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: 1px;
+    border-color: #6559c4;
+    border-style: solid;
+    margin-top: 2rem;
+}
+
+.voltar:hover {
+    background-color: #6559c4; /* Green */
+    color: white;
+    border: 1px;
+    border-color: white;
+    border-style: solid;
+}
+
+.voltar:active{
+    background-color: #a09ace;
+    color: black;
+    border: 1px;
+    border-color: #ffffff;
+    border-style: solid;
+    
+}
+
+
+.boxInput {
+    text-align: center;
+    color: #6559c4;;
+}
+
+.labelInput {
+    color: rgb(255, 50, 50);
+}
+
+.labelInputRequired {
+    color: rgb(255, 50, 50);
+    font-weight: bold;
 }

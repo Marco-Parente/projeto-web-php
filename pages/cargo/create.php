@@ -17,15 +17,18 @@ if (isset($_POST["nome"])) {
 }
 ?>
 
-Adicionar cargo
+<span class="tituloSubPagina">
+        Adicionar cargo
+</span>
 
-<form id="cargo" name="cadastro" method="post" action="#">
-    <label for="nome">Nome do Cargo</label>
-    <span class="">*</span>
-    <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do cargo..." required />
-
-    <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
-</form>
-<button onclick="location.href = './'">Voltar</button>
-
+    <br/>
+    <form id="cargo" class="boxInput"  name="cadastro" method="post" action="#">
+        <label for="nome">Nome do Cargo</label>
+        <span class="labelInputRequired">*</span>
+        <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do cargo..." required />
+        <br/>
+        <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
+        <button class="voltar" onclick="location.href = './'">Voltar</button>
+    </form>
+    
 <?php require_once "../../components/footer.php" ?>
