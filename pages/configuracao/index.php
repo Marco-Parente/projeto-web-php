@@ -28,9 +28,9 @@ function resetDatabase(PadariaDB $db)
 ?>
 
 <form method="post">
-    <input type="submit" name="createDatabase" class="buttonCadastro" value="Criar e inicializar banco" />
+    <input id="cadastrar" type="submit" name="createDatabase" class="buttonCadastro" value="Criar e inicializar banco" />
 
-    <input type="submit" name="resetDatabase" class="buttonCadastro" value="Resetar banco (clicar criar dps)" />
+    <input type="submit" id="deletar" name="resetDatabase" class="buttonCadastro" value="Resetar banco (clicar criar dps)" />
 </form>
 
 <?php require_once(realpath(dirname(__FILE__) . '/../../components/footer.php')); ?>

@@ -19,16 +19,16 @@ if (isset($_POST["nome"])) {
 
 $entity = findEntity($conn, "CategoriaProduto", $id);
 ?>
-
-Editar categoria
-
-<form id="categoria" name="cadastro" method="post" action="#">
+<span class="tituloSubPagina">
+    Editar categoria
+</span> 
+<form id="categoria" class="boxInput" name="cadastro" method="post" action="#">
     <label for="nome">Nome da Categoria</label>
-    <span class="">*</span>
+    <span class="labelInputRequired">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome da categoria..." value="<?= htmlspecialchars($entity['nome']) ?>" required />
 
     <input name="Cadastrar" type="submit" id="cadastrar" value="Editar" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-<button  onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

@@ -15,10 +15,10 @@ if (array_key_exists('deleteEntity', $_POST)) {
 
 $entity = findEntity($conn, "cliente", $id);
 ?>
-
-Deletar cliente
-
-<form id="cliente" name="cadastro" method="post" action="#">
+<span class="tituloSubPagina">
+    Deletar cliente
+</span>
+<form id="cliente" class="boxInput" name="cadastro" method="post" action="#">
     Você tem certeza de que quer deletar essa entidade? <br>
     <table class="tabela">
         <tr>
@@ -31,8 +31,8 @@ Deletar cliente
             <td><?= $entity['cpf'] ?></td>
         </tr>
     </table>
-    <input type="submit" name="deleteEntity" class="buttonCadastro" value="Deletar entidade" />
+    <input type="submit" name="deleteEntity" id="deletar" class="buttonCadastro" value="Deletar entidade" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

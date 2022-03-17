@@ -18,19 +18,20 @@ if (isset($_POST["nome"])) {
 }
 ?>
 
-Adicionar unidade
-
-<form id="unidade" name="cadastro" method="post" action="#">
-    <label for="nome">Nome da Unidade de Medida</label>
-    <span class="">*</span>
+<span class="tituloSubPagina">
+    Adicionar unidade
+</span>
+<form id="unidade" class="boxInput" name="cadastro" method="post" action="#">
+    <label for="nome">Nome </label>
+    <span class="labelInputRequired">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome da unidade de medida..." required />
 
-    
+    <br/>
     <label for="sigla">Sigla</label>
     <input name="sigla" type="text" id="sigla" size="70" maxlength="255" placeholder="Digite a sigla..."/>
-    
+    <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

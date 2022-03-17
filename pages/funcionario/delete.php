@@ -16,10 +16,10 @@ if (array_key_exists('deleteEntity', $_POST)) {
 $entidade = customSelectSql($conn, "SELECT f.id, f.nome, c.nome as cargo FROM funcionarios AS f JOIN cargo AS c ON f.cargo_id=c.id");
 $entity = mysqli_fetch_assoc($entidade)
 ?>
-
-Deletar funcionário
-
-<form id="funcionario" name="cadastro" method="post" action="#">
+<span class="tituloSubPagina">
+    Deletar funcionário
+</span>
+<form id="funcionario" class="boxInput" name="cadastro" method="post" action="#">
     Você tem certeza de que quer deletar essa entidade? <br>
     <table class="tabela">
         <tr>
@@ -32,8 +32,8 @@ Deletar funcionário
             <td><?= $entity['cargo'] ?></td>
         </tr>
     </table>
-    <input type="submit" name="deleteEntity" class="buttonCadastro" value="Deletar entidade" />
+    <input type="submit" name="deleteEntity" id="deletar" class="buttonCadastro" value="Deletar entidade" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

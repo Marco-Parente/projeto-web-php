@@ -18,19 +18,20 @@ if (isset($_POST["nome"])) {
 }
 ?>
 
-Adicionar cliente
-
-<form id="cliente" name="cadastro" method="post" action="#">
+<span class="tituloSubPagina">
+    Adicionar cliente
+</span>
+<form id="cliente" class="boxInput" name="cadastro" method="post" action="#">
     <label for="nome">Nome do Cliente</label>
-    <span class="">*</span>
+    <span class="labelInputRequired">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do cliente..." required />
 
-    
+    <br/>
     <label for="cpf">CPF</label>
     <input name="cpf" type="text" id="cpf" size="70" maxlength="11" placeholder="Digite o cpf..."/>
     
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

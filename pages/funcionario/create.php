@@ -17,18 +17,19 @@ if (isset($_POST["nome"], $_POST["cargo"])) {
     // $conn->close();
 }
 ?>
-
-Adicionar funcionário
-
+<span class="tituloSubPagina">
+    Adicionar funcionário
+</span>
+<br/>
 <form id="funcionario" name="cadastro" method="post" action="#">
     <label for="nome">Nome do Funcionário</label>
-    <span class="">*</span>
+    <span class="labelInputRequired">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do funcionário..." required />
 
     <?php require_once "../../components/select-cargo.php" ?>
-
+    <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

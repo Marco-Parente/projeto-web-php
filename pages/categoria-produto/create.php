@@ -16,17 +16,17 @@ if (isset($_POST["nome"])) {
     $conn->close();
 }
 ?>
-
-Adicionar categoria
-
-<form id="categoria" name="cadastro" method="post" action="#">
+<span class="tituloSubPagina">
+    Adicionar categoria
+</span>
+<form id="categoria" class="boxInput" name="cadastro" method="post" action="#">
     <label for="nome">Nome da Categoria</label>
-    <span class="">*</span>
+    <span class="labelInputRequired">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome da categoria..." required />
 
     <input  class="buttonConcluirCadastro" name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-asdasdasd
-<button  onclick="location.href = './'">Voltar</button>
+
 
 <?php require_once "../../components/footer.php" ?>

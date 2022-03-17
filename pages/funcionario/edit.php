@@ -18,18 +18,19 @@ if (isset($_POST["nome"], $_POST["cargo"])) {
 
 $entity = findEntity($conn, "funcionarios", $id);
 ?>
+<span class="tituloSubPagina">
+    Editar funcionario
+</span>
 
-Editar funcionario
-
-<form id="funcionario" name="cadastro" method="post" action="#">
+<form id="funcionario" class="boxInput" name="cadastro" method="post" action="#">
     <label for="nome">Nome do funcionário</label>
-    <span class="">*</span>
+    <span class="labelInputRequired">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do funcionario..." value="<?= htmlspecialchars($entity['nome']) ?>" required />
 
     <?php require_once "../../components/select-cargo.php" ?>
-
+    <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Editar" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>
