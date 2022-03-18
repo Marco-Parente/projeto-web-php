@@ -1,6 +1,7 @@
 <?php
 $title = "Padaria - Adicionar produto";
 require_once "../../components/header.php";
+require_once "../../components/select-categoria-produto.php";
 
 if (isset($_POST["nome"], $_POST["preco"], $_POST["categoria"])) {
     include("../../db/database.php");
@@ -31,7 +32,7 @@ Adicionar produto
     <br/>
     <input name="preco" type="text" id="preco" size="70" maxlength="255" placeholder="Digite o preço do produto..." required />
 
-    <?php require_once "../../components/select-categoria-produto.php" ?>
+    <?php selectCategoriaProduto() ?>
 
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
 </form>

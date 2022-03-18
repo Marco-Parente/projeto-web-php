@@ -1,6 +1,7 @@
 <?php
 $title = "Padaria - Adicionar funcionário";
 require_once "../../components/header.php";
+require_once "../../components/select-cargo.php";
 
 if (isset($_POST["nome"], $_POST["cargo"])) {
     include("../../db/database.php");
@@ -26,7 +27,7 @@ if (isset($_POST["nome"], $_POST["cargo"])) {
     <span class="labelInputRequired">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do funcionário..." required />
 
-    <?php require_once "../../components/select-cargo.php" ?>
+    <?php selectCargo() ?>
     <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
     <button class="voltar" onclick="location.href = './'">Voltar</button>

@@ -14,5 +14,6 @@ $arr = [
     'Funcionário' => "pages/funcionario",
     'Produto' => "pages/produto",
     'Estoque' => "pages/estoque",
+    'Produtos no Estoque' => "pages/produto-estoque",
     ]
 ?>

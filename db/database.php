@@ -64,8 +64,8 @@ class PadariaDB
         "CREATE TABLE `PedidoProduto` (
             `pedido_id` INT NOT NULL,
             `produto_id` INT NOT NULL,
-            `pedido_produto_id` INT NOT NULL AUTO_INCREMENT,
-            PRIMARY KEY (`pedido_produto_id`)
+            `id` INT NOT NULL AUTO_INCREMENT,
+            PRIMARY KEY (`id`)
         );",
 
         "CREATE TABLE `ProdutoEstoque` (
@@ -73,8 +73,8 @@ class PadariaDB
             `estoque_id` INT NOT NULL,
             `unidade_id` INT NOT NULL,
             `quantidade` INT NOT NULL,
-            `produto_estoque_id` INT NOT NULL AUTO_INCREMENT,
-            PRIMARY KEY (`produto_estoque_id`)
+            `id` INT NOT NULL AUTO_INCREMENT,
+            PRIMARY KEY (`id`)
         );",
 
         "ALTER TABLE `Produto` ADD CONSTRAINT `Produto_fk0` FOREIGN KEY (`categoria_id`) REFERENCES `CategoriaProduto`(`id`);",

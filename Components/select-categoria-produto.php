@@ -1,20 +1,27 @@
 <?php
-require_once "../../db/crud.php";
-require_once "../../db/database.php";
 
-$db = new PadariaDB();
-$conn = $db->return_connection();
+function selectCategoriaProduto($id = null)
+{
+    require_once "../../db/crud.php";
+    require_once "../../db/database.php";
 
-$categorias = listEntities($conn, "categoriaproduto");
+    $db = new PadariaDB();
+    $conn = $db->return_connection();
 
-$conn->close();
+    $categorias = listEntities($conn, "categoriaproduto");
+
+    $conn->close();
+
+    echo "<select name=\"categoria\" id=\"categoria\">";
+    echo "option<option value=\"\" selected disabled hidden>Selecione a categoria...</option>";
+    foreach ($categorias as $categoria) {
+        if (isset($id) && $categoria["id"] == $id) {
+            echo "<option selected value='{$categoria["id"]}'>{$categoria["nome"]}</option>";
+        } else {
+            echo "<option value='{$categoria["id"]}'>{$categoria["nome"]}</option>";
+        }
+    }
+    echo "</select>";
+}
 
 ?>
-
-<select name="categoria" id="categoria">
-<option value="" selected disabled hidden>Selecione o categoria do produto...</option>
-<?php 
-foreach ($categorias as $categoria) {
-    echo "<option value='{$categoria["id"]}'>{$categoria["nome"]}</option>";
-}?>
-</select>

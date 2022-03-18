@@ -4,6 +4,7 @@ $title = "Padaria - Editar produto";
 require_once "../../components/header.php";
 require_once "../../db/database.php";
 require_once "../../db/crud.php";
+require_once "../../components/select-categoria-produto.php";
 $db = new PadariaDB();
 $conn = $db->return_connection();
 
@@ -31,7 +32,7 @@ Editar produto
     <span class="">*</span>
     <input name="preco" type="text" id="preco" size="70" maxlength="255" placeholder="Digite o preço do produto..." value="<?= htmlspecialchars($entity['preco']) ?>" required />
 
-    <?php require_once "../../components/select-categoria-produto.php" ?>
+    <?php selectCategoriaProduto($entity["categoria_id"]) ?>
 
     <input name="Cadastrar" type="submit" id="cadastrar" value="Editar" />
 </form>
