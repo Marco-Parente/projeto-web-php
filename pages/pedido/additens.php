@@ -60,11 +60,14 @@ if ($preenchido) {
         </button>
     </td>
     <td>
-        <button type="button" onClick="menosUm()" class="buttonEdicao" href="./additens.php?qntProduto=$qntMenosUm">- Remover Produto</button>
+        <button id="removeItens" type="button" onClick="menosUm()" class="buttonEdicao" href="./additens.php?qntProduto=$qntMenosUm">
+            - Remover Produto
+        </button>
     </td>
-    <br>
+    <br/>
+    <br/>
     <?= "Quantidade de produtos: $qntProduto" ?>
-    <br>
+    <br/>
     <?php produtoRow() ?>
     <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />

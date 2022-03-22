@@ -367,26 +367,26 @@ input:focus{
 }
 
 
-#addItens{
+#addItens,#removeItens{
     float: left;
-    width: 10rem;
+    width: 12rem;
+    margin-left: 25%;
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* position:relative; */
-    /* color: white; */
-    /* margin: 10px; */
-    /* word-wrap: break-word; */
-    /* padding-left: 26px; */
-    /* padding: auto; */
-    
-    border: 0px;
-    border-left: 1px solid #ffffff;
-    border-style: solid;
     font-family: 'Quicksand', sans-serif;
-    font-size: medium;
-    transition-duration: 0.4s;
     padding-right: 7px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: 1px;
+    border-color: #6559c4;
+    border-style: solid;
+    margin-top: 2rem;
+}
+#removeItens{
+    margin-left: 0;
+    margin-right: 25%;
 }
