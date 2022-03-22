@@ -19,23 +19,24 @@ if (isset($_POST["nome"], $_POST["preco"], $_POST["categoria"])) {
     // $conn->close();
 }
 ?>
-
-Adicionar produto
+<span class="tituloSubPagina">
+    Adicionar produto
+</span>
 
 <form id="produto" name="cadastro" method="post" action="#">
     <label for="nome">Nome do Produto</label>
     <span class="">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do produto..." required />
-    
+    <br/>
     <label for="preco">Preço do Produto</label>
     <span class="">*</span>
-    <br/>
     <input name="preco" type="text" id="preco" size="70" maxlength="255" placeholder="Digite o preço do produto..." required />
+    <br/>
 
     <?php selectCategoriaProduto() ?>
-
+    <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
+    <button onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

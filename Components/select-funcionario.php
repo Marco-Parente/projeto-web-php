@@ -12,7 +12,7 @@ function selectFuncionario($id = null)
 
     $conn->close();
 
-    echo "<select name=\"funcionario\" id=\"funcionario\">";
+    echo "<select name=\"funcionario\" id=\"Selectmedio\">";
     echo "option<option value=\"\" selected disabled hidden>Selecione o funcionario...</option>";
     foreach ($funcionarios as $funcionario) {
         if (isset($id) && $funcionario["id"] == $id) {

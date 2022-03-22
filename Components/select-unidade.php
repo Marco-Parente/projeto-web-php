@@ -12,7 +12,7 @@ function selectUnidade($id = null)
 
     $conn->close();
 
-    echo "<select name=\"unidade\" id=\"unidade\">";
+    echo "<select name=\"unidade\" id=\"Selectmedio\">";
     echo "option<option value=\"\" selected disabled hidden>Selecione a unidade...</option>";
     foreach ($unidades as $unidade) {
         if (isset($id) && $unidade["id"] == $id) {

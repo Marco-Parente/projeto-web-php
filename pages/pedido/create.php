@@ -19,16 +19,16 @@ if (isset($_POST["cliente"], $_POST["funcionario"])) {
     // $conn->close();
 }
 ?>
-
+<span class="tituloSubPagina">
 Criar pedido
-
-<form id="pedido" name="cadastro" method="post" action="#">
+</span>
+<form id="pedido" name="cadastro"  class="boxInput" method="post" action="#">
 
     <?php selectCliente() ?>
     <?php selectFuncionario() ?>
-
+    <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
+    <button class="voltar"  onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

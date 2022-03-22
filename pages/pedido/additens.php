@@ -44,11 +44,20 @@ if ($preenchido) {
         window.location.href = `./additens.php?qntProduto=${qnt}`;
     }
 </script>
-Adicionar produto no pedido
-
-<form id="produto" name="cadastro" method="post" action="#">
+<span class="tituloSubPagina">
+    Adicionar produto 
+</span>
+<br/>
+<span class="tituloSubPagina">
+    no pedido
+</span>
+<form id="produto" class="boxInput" name="cadastro" method="post" action="#">
+    <br/>
     <td>
-        <button type="button" onClick="maisUm()" class="buttonEdicao" href="./additens.php?qntProduto=$qntMaisUm">Adicionar Produto +</button>
+        <button id="addItens" type="button" onClick="maisUm()" class="buttonEdicao" href="./additens.php?qntProduto=$qntMaisUm">
+            <img src="/projeto-web-php/images/plus.png" alt="Logo" width="35" height="35">
+            Adicionar Produto 
+        </button>
     </td>
     <td>
         <button type="button" onClick="menosUm()" class="buttonEdicao" href="./additens.php?qntProduto=$qntMenosUm">- Remover Produto</button>
@@ -57,9 +66,9 @@ Adicionar produto no pedido
     <?= "Quantidade de produtos: $qntProduto" ?>
     <br>
     <?php produtoRow() ?>
-
+    <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

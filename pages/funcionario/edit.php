@@ -22,7 +22,7 @@ $entity = findEntity($conn, "funcionarios", $id);
 <span class="tituloSubPagina">
     Editar funcionario
 </span>
-
+<br/>
 <form id="funcionario" class="boxInput" name="cadastro" method="post" action="#">
     <label for="nome">Nome do funcionário</label>
     <span class="labelInputRequired">*</span>
@@ -31,7 +31,7 @@ $entity = findEntity($conn, "funcionarios", $id);
     <?php selectCargo($entity["cargo_id"]) ?>
     <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Editar" />
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
-<button class="voltar" onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

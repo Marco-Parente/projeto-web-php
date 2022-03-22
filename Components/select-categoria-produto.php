@@ -12,7 +12,7 @@ function selectCategoriaProduto($id = null)
 
     $conn->close();
 
-    echo "<select name=\"categoria\" id=\"categoria\">";
+    echo "<select name=\"categoria\" id=\"Selectmedio\">";
     echo "option<option value=\"\" selected disabled hidden>Selecione a categoria...</option>";
     foreach ($categorias as $categoria) {
         if (isset($id) && $categoria["id"] == $id) {

@@ -12,7 +12,7 @@ function selectCliente($id = null)
 
     $conn->close();
 
-    echo "<select name=\"cliente\" id=\"cliente\">";
+    echo "<select name=\"cliente\" id=\"Selectmedio\">";
     echo "option<option value=\"\" selected disabled hidden>Selecione o cliente...</option>";
     foreach ($clientes as $cliente) {
         if (isset($id) && $cliente["id"] == $id) {

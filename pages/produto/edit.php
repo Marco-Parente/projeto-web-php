@@ -20,22 +20,22 @@ if (isset($_POST["nome"], $_POST["preco"], $_POST["categoria"])) {
 
 $entity = findEntity($conn, "produto", $id);
 ?>
-
-Editar produto
-
+<span class="tituloSubPagina">
+    Editar produto
+</span>
 <form id="produto" name="cadastro" method="post" action="#">
     <label for="nome">Nome do produto</label>
     <span class="">*</span>
     <input name="nome" type="text" id="nome" size="70" maxlength="255" placeholder="Digite o nome do produto..." value="<?= htmlspecialchars($entity['nome']) ?>" required />
-
+    <br/>
     <label for="preco">Preço do Produto</label>
     <span class="">*</span>
     <input name="preco" type="text" id="preco" size="70" maxlength="255" placeholder="Digite o preço do produto..." value="<?= htmlspecialchars($entity['preco']) ?>" required />
-
+    <br/>
     <?php selectCategoriaProduto($entity["categoria_id"]) ?>
-
+    <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Editar" />
+    <button onclick="location.href = './'">Voltar</button>
 </form>
-<button onclick="location.href = './'">Voltar</button>
 
 <?php require_once "../../components/footer.php" ?>

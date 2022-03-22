@@ -20,7 +20,7 @@ body {
 
 .subItemMenu {
     float: left;
-    width: 3.5rem;
+    width: 2.5rem;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -29,17 +29,17 @@ body {
     position:relative;
     color: white;
     margin: 10px;
-    padding-left: 10px;
     word-wrap: break-word;
-    padding-left: 25px;
+    padding-left: 26px;
     /* padding: auto; */
+    
     border: 0px;
     border-left: 1px solid #ffffff;
     border-style: solid;
     font-family: 'Quicksand', sans-serif;
     font-size: medium;
     transition-duration: 0.4s;
-    
+    padding-right: 7px;
     
 }
 
@@ -53,10 +53,7 @@ body {
     border-left: 1px solid #ffffff;
     border-style: solid;
     text-decoration: underline;
-}
-
-.subItemMenu:last-child {
-    padding-right: 10px
+    
 }
 
 .subItemMenu:active {
@@ -310,4 +307,86 @@ input:focus{
 .labelInputRequired {
     color: rgb(255, 50, 50);
     font-weight: bold;
+}
+
+#Select{
+    height: 2.3rem;
+    margin: 3px;
+    width: 10rem;
+    color: #1d1a38;
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: 1px;
+    border-color: #6559c4;
+    border-style: solid;
+    margin-top: 2rem;
+}
+
+#Select:focus{
+    background-color: gainsboro;
+    border: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #4a4288;
+    outline:none;
+}
+
+#Selectmedio{
+    height: 2.3rem;
+    margin: 3px;
+    width: 13rem;
+    color: #1d1a38;
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    border: 1px;
+    border-color: #6559c4;
+    border-style: solid;
+    margin-top: 2rem;
+}
+
+
+#Select:focus{
+    background-color: gainsboro;
+    border: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #4a4288;
+    outline:none;
+}
+
+
+#addItens{
+    float: left;
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* position:relative; */
+    /* color: white; */
+    /* margin: 10px; */
+    /* word-wrap: break-word; */
+    /* padding-left: 26px; */
+    /* padding: auto; */
+    
+    border: 0px;
+    border-left: 1px solid #ffffff;
+    border-style: solid;
+    font-family: 'Quicksand', sans-serif;
+    font-size: medium;
+    transition-duration: 0.4s;
+    padding-right: 7px;
 }
