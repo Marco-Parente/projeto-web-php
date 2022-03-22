@@ -35,11 +35,11 @@ function createEntity(mysqli $conn, string $nomeTabela, array $variaveis, string
     return mysqli_query($conn, $sql);
 }
 
-function listEntities(mysqli $conn, string $nomeTabela)
+function listEntities(mysqli $conn, string $nomeTabela, string $where = null)
 {
     $entities = [];
 
-    $sql = "SELECT * FROM {$nomeTabela}";
+    $sql = "SELECT * FROM {$nomeTabela} " . $where;
     $result = mysqli_query($conn, $sql);
 
     $result_check = mysqli_num_rows($result);

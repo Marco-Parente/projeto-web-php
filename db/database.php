@@ -64,6 +64,7 @@ class PadariaDB
         "CREATE TABLE `PedidoProduto` (
             `pedido_id` INT NOT NULL,
             `produto_id` INT NOT NULL,
+            `quantidade` INT NOT NULL,
             `id` INT NOT NULL AUTO_INCREMENT,
             PRIMARY KEY (`id`)
         );",
