@@ -43,7 +43,7 @@ class PadariaDB
 
         "CREATE TABLE `Pedido` (
             `id` INT NOT NULL AUTO_INCREMENT,
-            `cliente` INT NOT NULL,
+            `cliente_id` INT NOT NULL,
             `funcionario_id` INT NOT NULL,
             PRIMARY KEY (`id`)
         );",
@@ -81,7 +81,7 @@ class PadariaDB
 
         "ALTER TABLE `Funcionarios` ADD CONSTRAINT `Funcionarios_fk0` FOREIGN KEY (`cargo_id`) REFERENCES `Cargo`(`id`);",
 
-        "ALTER TABLE `Pedido` ADD CONSTRAINT `Pedido_fk0` FOREIGN KEY (`cliente`) REFERENCES `Cliente`(`id`);",
+        "ALTER TABLE `Pedido` ADD CONSTRAINT `Pedido_fk0` FOREIGN KEY (`cliente_id`) REFERENCES `Cliente`(`id`);",
 
         "ALTER TABLE `Pedido` ADD CONSTRAINT `Pedido_fk1` FOREIGN KEY (`funcionario_id`) REFERENCES `Funcionarios`(`id`);",
 

@@ -1,6 +1,6 @@
 <?php
 
-function selectProduto($id = null)
+function selectProduto($id = null, $selectId = "produto")
 {
     require_once "../../db/crud.php";
     require_once "../../db/database.php";
@@ -12,7 +12,7 @@ function selectProduto($id = null)
 
     $conn->close();
 
-    echo "<select name=\"produto\" id=\"produto\">";
+    echo "<select name=\"$selectId\" id=\"$selectId\">";
     echo "option<option value=\"\" selected disabled hidden>Selecione o produto...</option>";
     foreach ($produtos as $produto) {
         if (isset($id) && $produto["id"] == $id) {
