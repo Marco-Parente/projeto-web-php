@@ -369,8 +369,9 @@ input:focus{
 
 #addItens,#removeItens{
     float: left;
-    width: 12rem;
-    margin-left: 25%;
+    width: 10rem;
+    margin-left: 27.25%;
+    margin-right: 5%;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -388,5 +389,5 @@ input:focus{
 }
 #removeItens{
     margin-left: 0;
-    margin-right: 25%;
+    margin-right: 22.5%;
 }
