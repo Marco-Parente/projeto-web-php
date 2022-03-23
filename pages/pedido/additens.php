@@ -96,15 +96,19 @@ if ($submited == "true") {
     <td>
         <button id="addItens" type="button" onClick="maisUm()" class="buttonEdicao">
             <img src="/projeto-web-php/images/plus.png" alt="Logo" width="35" height="35">
-            Adicionar Produto 
+            &nbsp Adicionar Produto 
         </button>
     </td>
     <td>
-        <button type="button" onClick="menosUm()" class="buttonEdicao">- Remover Produto</button>
+        <button id="removeItens" type="button" onClick="menosUm()" class="buttonEdicao">
+             Remover Produto &nbsp
+            <img src="/projeto-web-php/images/remove.png" alt="Logo" width="35" height="35">
+        </button>
     </td>
-    <br>
+</br>
+</br>
     <?= "Quantidade de produtos: $qntProduto" ?>
-    <br>
+</br>
 
     <?php
     for ($i = 0; $i < $qntProduto; $i++) {
@@ -112,7 +116,7 @@ if ($submited == "true") {
         $idProdutoAtual = $_GET["idProduto-$i"] ?? $entidades[$i]["produto_id"] ?? null;
         selectProduto($idProdutoAtual, selectId: "idProduto-$i");
         echo "&nbsp;&nbsp;&nbsp;&nbsp;<label for=\"quantidade\">Quantidade</label>
-            <span class=\"\">*</span>
+            <span class=\"labelInputRequired\">*</span>
             <input name=\"qntProduto-$i\" type=\"text\" id=\"qntProduto-$i\" size=\"70\" maxlength=\"255\" placeholder=\"Digite a quantidade disponível...\" value=\"$qntProdutoAtual\" required />";
         echo "<br>";
     }
