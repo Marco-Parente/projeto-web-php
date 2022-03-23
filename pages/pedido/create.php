@@ -28,7 +28,7 @@ Criar pedido
     <?php selectFuncionario() ?>
     <br/>
     <input name="Cadastrar" type="submit" id="cadastrar" value="Concluir cadastro" />
-    <button class="voltar"  onclick="location.href = './'">Voltar</button>
+    <button class="voltar" onclick="location.href = './'">Voltar</button>
 </form>
 
 <?php require_once "../../components/footer.php" ?>
